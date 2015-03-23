@@ -100,7 +100,7 @@ public class LineOfSight : MonoBehaviour
 					{
 						Debug.DrawLine(lightpos, pointworldspace, Color.green);
 						Debug.DrawLine((Vector3)pointworldspace + dir.normalized * offset, lightpos + dir.normalized * range, Color.red);
-						Vector2 pointtoadd1 = pointworldspace - (Vector2)lightpos;
+						Vector2 pointtoadd1 = pointworldspace - (Vector2)lightpos + (Vector2)dir.normalized * offset;
 						Vector2 pointtoadd2 = dir.normalized * range;
 						verts.Add(new Vector3(pointtoadd1.x, pointtoadd1.y, j + 0.1f));
 						verts.Add(new Vector3(pointtoadd2.x, pointtoadd2.y, j + 0.1f));
